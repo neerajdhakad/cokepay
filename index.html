@@ -16,9 +16,9 @@
   <body>
     <div class="main">
       <!-- Navbar Start -->
-      <nav class="navbar bg-white border-2 border-[#ff34ff] py-4">
+      <nav class="w-full fixed bg-white z-[999] navbar bg-white border-2 border-[#ff34ff] py-4">
         <div
-          class="flex items-center px-8 md:px-0 justify-between md:justify-center gap-8 text-md font-regular"
+          class="flex items-center px-8 md:px-0 justify-between md:justify-center gap-14 text-md poppins-regular"
         >
           <p class="hidden md:block">Home</p>
           <p class="hidden md:block">Features</p>
@@ -342,7 +342,7 @@
       </nav>
       <!-- Navbar End -->
       <!-- Hero Section Start -->
-      <section class="relative px-8 md:px-0 border-2 border-[#00ff00] w-full">
+      <section class="relative px-8 md:px-0 border-2 border-[#00ff00] w-full pt-20">
         <div class="flex items-center justify-center border-2 border-[#0000ff]">
           <div class="hidden md:block div1">
             <img class="" src="./assets/splash-screen.png" alt="" />
@@ -404,7 +404,7 @@
           </div>
         </div>
         <!-- Features section -->
-        <div class="features-section border-[#000]">
+        <div class="features-section border-10 border-[#00ffff] px-3">
           <svg class="w-full" height="970" viewBox="0 0 1920 970" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1533.41 201.081H1920V960L0 970V0H1327.39C1356.42 0 1383.17 15.7207 1397.29 41.0788L1463.51 160.002C1477.63 185.36 1504.38 201.081 1533.41 201.081Z" fill="#F40009"/>
             </svg>            
@@ -457,7 +457,7 @@
       <!-- About Us Section End -->
       <!-- FAQ Section Start -->
       <section class="w-full min-h-screen mx-auto py-12 px-4 bg-[#F40009]">
-        <h1 class="poppins-bold text-6xl font-bold text-center mb-8 text-white">
+        <h1 class="poppins-bold text-6xl font-bold text-center mb-2 text-white">
           FAQ's
         </h1>
         <p class="poppins-semibold text-3xl text-center mb-12">
@@ -1013,6 +1013,53 @@
         </div>
       </section>
       <!-- Footer End -->
+       <!-- Features Section Start-->
+        <section class="py-4 bg-[#F40009] ">
+          <div class="flex items-center justify-center flex-wrap gap-8 px-4 md:px-8">
+            <!-- Feature Block -->
+            <div class="flex items-center justify-center gap-4 border-2">
+              <div class="flex items-center justify-center rounded-full bg-white gap-3 p-4">
+                  <img class="md:h-10 md:w-10" src="./assets/feature-icons/purchase.png" alt="">
+              </div>
+              <div><span class="poppins-semibold">Seamless Purchases:</span>
+              <p class="poppins-regular">Connect to any Coca-Cola vending machine that supports CokePay and make quick, cashless transactions. </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center  gap-4 ">
+              <div class="flex items-center justify-center rounded-full bg-white gap-3 p-4"> 
+                  <img class="md:h-10 md:w-10" src="./assets/feature-icons/top-ups.png" alt=""> 
+              </div>
+              <div><span class="poppins-semibold">Multiple Top-Up Options: </span>
+              <p class="poppins-regular">Easily top up your balance with credit cards, debit cards, and ATH for uninterrupted shopping. </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center  gap-4 ">
+              <div class="flex items-center justify-center rounded-full bg-white gap-3 p-4"> 
+                  <img class="md:h-10 md:w-10" src="./assets/feature-icons/ease-of-use.png" alt=""> 
+              </div>
+              <div><span class="poppins-semibold">Ease of Use:</span>
+              <p class="poppins-regular">Intuitive and user-friendly interface for a hassle-free shopping experience.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center  gap-4 ">
+              <div class="flex items-center justify-center rounded-full bg-white gap-3 p-4"> 
+                  <img class="md:h-10 md:w-10" src="./assets/feature-icons/payment.png" alt=""> 
+              </div>
+              <div><span class="poppins-semibold">Versatile Payment Methods:</span>
+              <p class="poppins-regular">Choose from a variety of top-up options to keep your balance ready for your next purchase.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center  gap-4 ">
+              <div class="flex items-center justify-center rounded-full bg-white gap-3 p-4"> 
+                  <img class="md:h-10 md:w-10" src="./assets/feature-icons/cashless.png" alt=""> 
+              </div>
+              <div><span class="poppins-semibold">Cashless Transactions:</span>
+              <p class="poppins-regular">Enjoy the convenience of cashless purchases, making it easier to buy your favorite drinks on the go. Make your vending machine purchases smarter and more rewarding with CokePay. </p>
+              </div>
+            </div>
+          </div>
+        </section>
+       <!-- Features Section End -->
     </div>
     <script src="script.js"></script>
   </body>

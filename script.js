@@ -9,6 +9,21 @@ const faqs = [
     answer:
       "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
   },
+  {
+    question: "What is the refund policy?",
+    answer:
+      "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
+  },
+  {
+    question: "What is the refund policy?",
+    answer:
+      "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
+  },
+  {
+    question: "What is the refund policy?",
+    answer:
+      "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
+  },
   // Add more FAQs here
 ];
 
@@ -21,7 +36,8 @@ faqs.forEach((faq, index) => {
     "px-8",
     "py-6",
     "transition-all",
-    "duration-300" 
+    "duration-300",
+    "mb-1" 
   );
 
   faqElement.innerHTML = `
@@ -33,7 +49,7 @@ faqs.forEach((faq, index) => {
           <div class="flex justify-between items-center">
             <h2 class="text-xl poppins-semibold">${faq.question}</h2>
             <button class="faq-toggle focus:outline-none text-xl text-[#F40009]">
-              <span class="plus-icon">+</span>  
+              <span class="plus-icon hover:text-black">+</span>  
                 <svg class="hidden minus-icon w-6 h-6" width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.203857" y="0.0679932" width="46.1733" height="46.1733" rx="23.0866" fill="black"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M28.7321 19.0734L27.3717 17.713L23.2905 21.7942L19.2093 17.713L17.849 19.0734L21.9301 23.1546L17.849 27.2358L19.2093 28.5962L23.2905 24.515L27.3717 28.5962L28.7321 27.2358L24.6509 23.1546L28.7321 19.0734Z" fill="white"/>
