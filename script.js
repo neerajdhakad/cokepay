@@ -126,7 +126,7 @@ faqs.forEach((faq, index) => {
         }</h1>
         <div class="flex flex-col w-full">
           <div class="flex justify-between items-center">
-            <h2 class="text-xl poppins-semibold">${faq.question}</h2>
+            <h2 class="text-md md:text-xl poppins-semibold">${faq.question}</h2>
             <button class="faq-toggle focus:outline-none text-xl text-[#F40009]">
               <span class="plus-icon hover:text-black">+</span>  
                 <svg class="hidden minus-icon w-6 h-6" width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +135,7 @@ faqs.forEach((faq, index) => {
                 </svg> 
             </button>
           </div>
-          <p class="poppins-regular mt-2 hidden overflow-hidden">${
+          <p class="poppins-regular mt-2 text-sm md:text-md hidden overflow-hidden">${
             faq.answer
           }</p>
         </div>
