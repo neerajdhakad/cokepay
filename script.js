@@ -1,31 +1,110 @@
 const faqs = [
   {
-    question: "How can I make my Lend/Sell PRICELESS?",
-    answer:
-      "The core idea of Little Sharers is 'sharing'; if you too believe the same, go ahead and post your LEND | SELL as zero-priced making your child’s memories priceless!",
+    question: "What is this app?",
+    answer: "The app is a loyalty program that allows users to make cashless purchases from Coca-Cola vending machines using their smartphone. It connects to the vending machine via Bluetooth and enables easy, convenient, and cashless transactions."
   },
   {
-    question: "What is the refund policy?",
-    answer:
-      "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
+    question: "How does the app connect to a vending machine?",
+    answer: "The app uses Bluetooth to connect to nearby vending machines. Simply open the app, select 'Purchase,' and choose the machine that matches the machine ID sticker on the vending machine."
   },
   {
-    question: "What is the refund policy?",
-    answer:
-      "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
+    question: "How do I make a purchase?",
+    answer: "After connecting to the vending machine, you have 25 seconds to make a selection using the machine's keypad. Once you choose a product, the app will display the total amount to be paid. Approve the transaction in the app, and your product will be delivered to the vending machine tray for pickup."
   },
   {
-    question: "What is the refund policy?",
-    answer:
-      "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
+    question: "How will the payment be done while making the purchase?",
+    answer: "The amount of the product purchased will be deducted from the credits loaded in the app once you approve the payment. Make sure your account has sufficient credits before making the purchase."
   },
   {
-    question: "What is the refund policy?",
-    answer:
-      "You can request a refund within 30 days of purchase. Please contact our support for assistance.",
+    question: "Do I need to load credits in the app?",
+    answer: "Yes, to make a purchase, you need to pre-load credits into your account. You can add funds using a credit card, debit card, or banking card."
   },
-  // Add more FAQs here
+  {
+    question: "What happens if I don’t select a product within 25 seconds?",
+    answer: "If you don’t make a selection within the 25-second window, the connection to the vending machine will time out, and you will need to reconnect to start the purchase process again."
+  },
+  {
+    question: "Can I use the app with any vending machine?",
+    answer: "The app is compatible with vending machines that are part of the program and have a Bluetooth connection. Look for the app’s machine ID sticker to verify compatibility."
+  },
+  {
+    question: "How do I know the correct vending machine to connect with?",
+    answer: "After selecting 'Purchase' in the app, you’ll see a list of nearby machines. Match the machine ID displayed in the app with the sticker on the vending machine to ensure you're connecting to the correct one."
+  },
+  {
+    question: "Is there a limit to how many credits I can load onto the app?",
+    answer: "Yes, you can load a maximum of $100 USD onto the app at any given time. Make sure your account has sufficient balance before making a purchase."
+  },
+  {
+    question: "What if I have a problem with the app or a purchase?",
+    answer: "If you encounter any issues, such as a failed connection or an incorrect charge, please contact our customer support team through the app’s Help section. We're here to assist you."
+  },
+  {
+    question: "Can I earn rewards with this app?",
+    answer: "Yes! By using the app to make purchases, you can earn loyalty points and rewards, which can be redeemed for promotions, future discounts, or free products. This feature will be available soon in selected markets."
+  },
+  {
+    question: "Is my payment information secure?",
+    answer: "Absolutely. We use industry-standard encryption and secure payment processing to ensure your payment information is safe at all times."
+  },
+  {
+    question: "How do I update my payment method?",
+    answer: "You can update your payment information in the app settings under the 'Payment Methods' section. This will allow you to manage your credit, debit, or banking card details."
+  },
+  {
+    question: "Where is the service available?",
+    answer: "The service is currently available on selected vending machines with the CokePay signage in Puerto Rico. We're expanding to more locations soon, so stay tuned!"
+  },
+  {
+    question: "How long do I have to approve the payment after selecting a product?",
+    answer: "After selecting a product, you have 25 seconds to approve the payment. If you don't approve the payment within this time, the transaction will be voided, and you'll need to start the purchase process again."
+  },
+  {
+    question: "Can I purchase multiple products in one transaction?",
+    answer: "No, the app allows you to purchase only one product at a time. If you want to buy multiple products, you'll need to complete separate transactions for each item."
+  },
+  {
+    question: "How can I view my recent transactions?",
+    answer: "To view your recent transactions, simply select the 'Transaction History' button on the home screen. You'll be able to see a list of your most recent transactions, up to the last 25."
+  },
+  {
+    question: "How do I load credits into my account?",
+    answer: "To load credits, go to the home screen and select the 'Reload' button. Then, choose your preferred payment method to pre-purchase credits and follow the on-screen instructions based on the selected payment method."
+  },
+  {
+    question: "How do I delete my account?",
+    answer: "To delete your account, go to the user profile section in the app and press the 'Delete' button. Follow the prompts to confirm the deletion. You will have to contact the administrator to re-activate the same account."
+  },
+  {
+    question: "How do I update my personal information?",
+    answer: "To update your personal information, go to the Profile section of the app and select the 'Personal Information' menu option. From there, you can update your details as needed."
+  },
+  {
+    question: "Where can I find the Privacy Policy?",
+    answer: "To view the Privacy Policy, go to the app menu and select the 'Settings' page. On the Settings page, you'll find a section labeled 'Privacy Policy' where you can review the details."
+  },
+  {
+    question: "Where can I find the Terms of Use policy?",
+    answer: "To view the Terms of Use, go to the app menu and select the 'Settings' page. On the Settings page, you'll find a section labeled 'Terms of Use' where you can review the policy."
+  },
+  {
+    question: "How do I enable biometrics or face identification?",
+    answer: "To enable biometrics or face identification, go to the 'Settings' page in the app menu. Then, select the 'Security' menu option and follow the instructions to enable biometrics for added security."
+  },
+  {
+    question: "How do I change my login password?",
+    answer: "To change your login password, go to the 'Settings' page in the app menu. Then, select the 'Security' menu option, and you'll find an option to change your password. Follow the prompts to update your password."
+  },
+  {
+    question: "How do I change my PIN number?",
+    answer: "To change your PIN number, go to the 'Settings' page in the app menu. Then, select the 'Security' menu option, where you'll find an option to change your PIN. Follow the prompts to update your PIN number."
+  },
+  {
+    question: "Is my personal information secure?",
+    answer: "Absolutely. We use industry-standard encryption and data protection measures to ensure your personal information is secure and handled with the utmost care."
+  }
 ];
+
 
 const faqContainer = document.getElementById("faq-container");
 
@@ -42,7 +121,7 @@ faqs.forEach((faq, index) => {
 
   faqElement.innerHTML = `
       <div class="flex justify-between items-start gap-3">
-        <h1 class="poppins-bold text-4xl text-[rgb(244,0,9,60%)]">0${
+        <h1 class="poppins-bold text-4xl text-[rgb(244,0,9,60%)]">${
           index + 1
         }</h1>
         <div class="flex flex-col w-full">
