@@ -184,4 +184,41 @@ toggles.forEach(toggle => {
 });
 
 
+// Navbar
+document.getElementById('hamburger').onclick = function() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.querySelector('.hamburger');
 
+  // Toggle mobile menu
+  if (mobileMenu.classList.contains('hidden')) {
+    mobileMenu.classList.remove('-translate-y-full', 'hidden');
+    mobileMenu.classList.add('translate-y-0');
+  } else {
+    mobileMenu.classList.add('-translate-y-full');
+    mobileMenu.classList.remove('translate-y-0');
+    setTimeout(() => {
+      mobileMenu.classList.add('hidden');
+    }, 300);
+  }
+
+  // Toggle hamburger icon to cross
+  hamburgerIcon.classList.toggle('cross');
+};
+
+// Close the mobile menu and revert hamburger when a link is clicked
+const mobileLinks = document.querySelectorAll('#mobile-menu a');
+
+mobileLinks.forEach(link => {
+  link.onclick = function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.querySelector('.hamburger');
+    mobileMenu.classList.add('-translate-y-full');
+    mobileMenu.classList.remove('translate-y-0');
+    setTimeout(() => {
+      mobileMenu.classList.add('hidden');
+    }, 300);
+
+    // Revert hamburger icon to original
+    hamburgerIcon.classList.remove('cross');
+  };
+});
