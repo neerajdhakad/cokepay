@@ -222,3 +222,26 @@ mobileLinks.forEach(link => {
     hamburgerIcon.classList.remove('cross');
   };
 });
+
+
+// Loader Animation
+var tl = gsap.timeline();
+
+tl.from("#loader img", {
+  x: 100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.1,
+});
+tl.to("#loader img", {
+  opacity: 0,
+  x: -10,
+  duration: 1,
+  stagger: 0.1,
+});
+tl.to("#loader", {
+  opacity: 0,
+});
+tl.to("#loader", {
+  display: "none",
+});
