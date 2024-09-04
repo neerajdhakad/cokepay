@@ -251,7 +251,10 @@ tl.from("nav div a",{
   opacity:0,
   stagger:0.15, 
 })
-
+tl.from("#mobile-screen",{
+  y:30,
+  opacity:0
+})
 tl.from(".div2 h1, .div2 span svg",{
   y:30,
   opacity:0, 
@@ -264,7 +267,6 @@ tl.from(".div2 button",{
   y:30,
   opacity:0, 
 })
-
 tl.from("#vending-machine",{
   x:-100,
   opacity:0
