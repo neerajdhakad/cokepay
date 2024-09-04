@@ -245,3 +245,40 @@ tl.to("#loader", {
 tl.to("#loader", {
   display: "none",
 });
+
+tl.from("nav div a",{
+  y:-10,
+  opacity:0,
+  stagger:0.15, 
+})
+
+tl.from(".div2 h1, .div2 span svg",{
+  y:30,
+  opacity:0, 
+})
+tl.from(".div2 p",{
+  y:30,
+  opacity:0, 
+})
+tl.from(".div2 button",{
+  y:30,
+  opacity:0, 
+})
+
+tl.from("#vending-machine",{
+  x:-100,
+  opacity:0
+},"svgs")
+tl.from(".bottle",{
+  x:200,
+  opacity:0
+},"svgs")
+
+tl.from("#splash-screen",{
+  x:-100,
+  opacity:0,
+},"images")
+tl.from("#wallet",{
+  x:100,
+  opacity:0,
+},"images")

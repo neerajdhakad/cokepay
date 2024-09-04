@@ -54,24 +54,25 @@
         class="relative px-8 md:px-0 w-full pt-32 pb-12  md:pb-0 md:pt-20 overflow-hidden"
       >
       <span class="hidden md:absolute md:block left-[18%] bottom-[60%]  ">
-          <img class="h-32 w-32" src="./assets/Coke.png" alt="coke-logo">
+          <img class="h-32 w-32 bottle" src="./assets/Coke.png" alt="coke-logo">
       </span> 
         <div class="flex items-center justify-center ">
           <div class="hidden md:block div1">
-            <img class="" src="./assets/splash-screen.png" alt="" />
+            <img id="splash-screen" src="./assets/splash-screen.png" alt="" />
           </div>
           <div class="relative div2">
             <div class="flex flex-col gap-3 md:gap-6 items-center justify-center">
-            <img class="inline md:hidden" src="./assets/mobile-screens.png" alt="">
-              <h1 class="poppins-bold text-3xl md:text-6xl text-center">
+            <img  class="inline md:hidden" src="./assets/mobile-screens.png" alt="">
+              <h1 class="poppins-bold text-3xl md:text-6xl text-center" id="heading">
                 Refresh your world,
                 <br>
                 Recharge through your app
               </h1> 
               <span class="hidden md:absolute top-8 left-[25%] z-[-1]"
-                ><svg
+                ><svg 
                   width="176"
                   height="35"
+                  class="bottle"
                   viewBox="0 0 176 35"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,13 +109,14 @@
               </a>
             </div>
             <img
+              id="vending-machine"
               class="h-48 w-56 absolute vending-machine hidden md:block"
               src="./assets/vending-machine.png"
               alt=""
             />
           </div>
           <div class="hidden md:block div3 ">
-            <img src="./assets/wallet.png" alt="" />
+            <img id="wallet" src="./assets/wallet.png" alt="" />
           </div>
         </div> 
     </section>
