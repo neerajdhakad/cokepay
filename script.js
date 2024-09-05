@@ -104,8 +104,6 @@ const faqs = [
     answer: "Absolutely. We use industry-standard encryption and data protection measures to ensure your personal information is secure and handled with the utmost care."
   }
 ];
-
-
 const faqContainer = document.getElementById("faq-container");
 
 faqs.forEach((faq, index) => {
@@ -223,6 +221,84 @@ mobileLinks.forEach(link => {
   };
 });
 
+//Captcha function
+
+function generateCaptcha() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$!";
+  let captcha = '';
+  for (let i = 0; i < 6; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return captcha;
+}
+
+// Function to set captcha
+function setCaptcha() {
+  const captchaText = document.getElementById('captchaText');
+  const newCaptcha = generateCaptcha(); 
+  const spacedCaptcha = newCaptcha.split('').join('  ');
+  
+  captchaText.innerText = spacedCaptcha; 
+  captchaText.style.transform = '';  
+}
+
+// Initialize captcha on page load
+window.onload = setCaptcha;
+
+// Refresh captcha when button is clicked
+document.getElementById('refreshCaptcha').addEventListener('click', function () {
+  setCaptcha();
+});
+
+ // Function to validate form fields
+ document.getElementById('submitBtn').addEventListener('click', function() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const captchaInput = document.getElementById('captcha-input').value.trim();
+  const captchaText = document.getElementById('captchaText').innerText.trim();
+  
+  let valid = true;
+
+  // Name validation
+  if (!name) {
+    document.getElementById('name-error').classList.remove('hidden');
+    valid = false;
+  } else {
+    document.getElementById('name-error').classList.add('hidden');
+  }
+
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    document.getElementById('email-error').classList.remove('hidden');
+    valid = false;
+  } else {
+    document.getElementById('email-error').classList.add('hidden');
+  }
+
+  // Message validation
+  if (!message) {
+    document.getElementById('message-error').classList.remove('hidden');
+    valid = false;
+  } else {
+    document.getElementById('message-error').classList.add('hidden');
+  }
+
+  // Captcha validation
+  if (captchaInput !== captchaText.replace(/\s/g, '')) { // Remove spaces in captchaText
+    document.getElementById('captcha-error').classList.remove('hidden');
+    valid = false;
+  } else {
+    document.getElementById('captcha-error').classList.add('hidden');
+  }
+
+  // If form is valid, submit it (you can add further actions here)
+  if (valid) {
+    alert('Form submitted successfully!');
+    // You can submit the form or send an AJAX request here
+  }
+});
 
 // Loader Animation
 var tl = gsap.timeline();
