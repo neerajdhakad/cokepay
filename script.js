@@ -345,7 +345,7 @@ languageOptionsMobile.addEventListener('click', (event) => {
 });
 
 // Loader Animation
-// var tl = gsap.timeline();
+var tl = gsap.timeline();
 
 tl.from("#loader img", {
   x: 100,
