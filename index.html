@@ -15,43 +15,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div id="loader">
+    <!-- <div id="loader">
        <img class="h-32 w-32" src="./assets//logo.svg" alt="loading-logo">
-    </div>
+    </div> -->
     <div class="main"> 
       
     <!-- Navbar Start -->
-      <nav class="w-full fixed bg-white z-[50] navbar py-4">
-      <div class="flex items-center px-8 md:px-0 justify-between md:justify-center gap-14 text-md poppins-regular">
-        <a href="#" class="hidden md:block hover:text-[#F40009]">Home</a>
-        <a href="#features" class="hidden md:block hover:text-[#F40009]">Features</a>
-        <a href="#">
-          <img class="h-16 w-16 md:h-22 md:w-22" src="./assets/logo.svg" alt="logo">
-        </a>
-        <a href="#contact" class="hidden md:block hover:text-[#F40009]">Contact</a>
-        <a href="#faq" class="hidden md:block hover:text-[#F40009]">FAQ's</a>
-        <!-- Hamburger Icon -->
-        <a href="javascript:void(0);" class="block md:hidden" id="hamburger">
-          <div class="hamburger">
-            <span class="block w-8 h-1 bg-[#F40009] mb-1 transition-transform"></span>
-            <span class="block w-8 h-1 bg-[#F40009] mb-1 transition-transform"></span>
-            <span class="block w-8 h-1 bg-[#F40009] transition-transform"></span>
-          </div>
-        </a>
-      </div>
+      <nav class="md:flex md:justify-between md:items-center gap-4 w-full fixed bg-white z-[50] navbar py-4">
+        <div class="hidden md:block"></div>
+        <div class="flex items-center px-8 md:px-0 justify-between md:justify-center gap-14 text-md poppins-regular bg-white">
+          <a href="#" class="hidden md:block hover:text-[#F40009]">Home</a>
+          <a href="#features" class="hidden md:block hover:text-[#F40009]">Features</a>
+          <a href="#">
+            <img class="h-16 w-16 md:h-22 md:w-22" src="./assets/logo.svg" alt="logo">
+          </a>
+          <a href="#contact" class="hidden md:block hover:text-[#F40009]">Contact</a>
+          <a href="#faq" class="hidden md:block hover:text-[#F40009]">FAQ's</a>
+          <!-- Hamburger Icon -->
+          <a href="javascript:void(0);" class="block md:hidden" id="hamburger">
+            <div class="hamburger">
+              <span class="block w-8 h-1 bg-[#F40009] mb-1 transition-transform"></span>
+              <span class="block w-8 h-1 bg-[#F40009] mb-1 transition-transform"></span>
+              <span class="block w-8 h-1 bg-[#F40009] transition-transform"></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="hidden md:flex items-center justify-center mr-8 cursor-pointer relative bg-white">
+          <h1 id="selectedLanguage" class="mx-4">EN</h1>
+          <img class="h-5 w-5 cursor-pointer arrow" src="./assets/arrow.svg" alt="arrow" id="dropdownArrow">
+          <ul id="languageOptions" class="absolute top-8 left-0 bg-white border rounded-md hidden z-10">
+            <li class="cursor-pointer px-4 py-2 hover:bg-[#F40009] hover:text-white" data-lang="EN">EN</li>
+            <li class="cursor-pointer px-4 py-2 hover:bg-[#F40009] hover:text-white" data-lang="SP">SP</li>
+          </ul>
+        </div>
+
       <!-- Responsive Navbar Links -->
-      <div id="mobile-menu" class="hidden md:hidden bg-white p-6 absolute w-full top-16 left-0 shadow-lg transition-transform transform -translate-y-full z-[-1] px-8">
+      <div id="mobile-menu" class="hidden md:hidden bg-white p-10 absolute w-full top-16 left-0 shadow-lg transition-transform transform -translate-y-full z-[-9] px-8">
         <a href="#" class="block mb-4 hover:text-[#F40009]">Home</a>
         <a href="#features" class="block mb-4 hover:text-[#F40009]">Features</a>
         <a href="#contact" class="block mb-4 hover:text-[#F40009]">Contact</a>
-        <a href="#faq" class="block hover:text-[#F40009]">FAQ's</a>
+        <a href="#faq" class="block hover:text-[#F40009] mb-4">FAQ's</a>
+        <!-- Mobile Dropdown -->
+        <div class="flex md:items-center md:justify-center md:mr-8 cursor-pointer relative">
+          <h1 id="selectedLanguageMobile" class="md:mx-4">EN</h1>
+          <img class="h-5 w-5 cursor-pointer arrow" src="./assets/arrow.svg" alt="arrow" id="dropdownArrowMobile">
+          <ul id="languageOptionsMobile" class="absolute top-8 left-0 bg-white border rounded-md hidden z-10">
+            <li class="cursor-pointer px-4 py-2 hover:bg-[#F40009] hover:text-white" data-lang="EN">EN</li>
+            <li class="cursor-pointer px-4 py-2 hover:bg-[#F40009] hover:text-white" data-lang="SP">SP</li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- Navbar End -->
 
     <!-- Hero Section Start -->
     <section
-        class="relative px-8 md:px-0 w-full pt-32 pb-12  md:pb-0 md:pt-20 overflow-hidden"
+        class="relative px-8 md:px-0 w-full pt-32 pb-12 md:pb-0 md:pt-20 overflow-hidden min-h-screen"
       >
       <span class="hidden md:absolute md:block left-[18%] bottom-[60%]  ">
           <img class="h-32 w-32 bottle" src="./assets/Coke.png" alt="coke-logo">
@@ -105,7 +125,10 @@
                 rewards!
               </p> 
               <a href="https://download.cokepayapp.com/pr" target="_blank">
-                <button class="cursor-pointer rounded-full poppins-regular py-4 px-6 md:py-6 md:px-8 bg-[#F40009] text-white text-md md:text-lg hover:bg-black">Download App Now</butt>
+                <button class="relative cursor-pointer rounded-full poppins-regular py-4 px-6 md:py-6 md:px-8 bg-[#F40009] text-white text-md md:text-lg hover:bg-black overflow-hidden bubble-button">
+                  Download App Now
+                  <span class="bubbles"></span>
+                </button>
               </a>
             </div>
             <img
@@ -315,6 +338,7 @@
             class="w-full flex flex-col gap-3 md:gap-0 md:flex-row justify-between flex-wrap my-[5%]"
           >
             <div class="">
+              <a href="#">
               <svg
                 width="65"
                 height="65"
@@ -600,6 +624,7 @@
                   </clipPath>
                 </defs>
               </svg>
+            </a>
             </div>
             <div>
               <p class="poppins-medium mb-[1em]">Company</p>

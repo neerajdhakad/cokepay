@@ -300,8 +300,52 @@ document.getElementById('refreshCaptcha').addEventListener('click', function () 
   }
 });
 
+const dropdownArrow = document.getElementById('dropdownArrow');
+const languageOptions = document.getElementById('languageOptions');
+const selectedLanguage = document.getElementById('selectedLanguage');
+
+// Toggle dropdown visibility when arrow is clicked
+dropdownArrow.addEventListener('click', () => {
+  languageOptions.classList.toggle('hidden');
+});
+
+// Update the selected language when an option is clicked
+languageOptions.addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    const selectedLang = event.target.getAttribute('data-lang');
+    selectedLanguage.innerText = selectedLang;
+    languageOptions.classList.add('hidden'); // Hide dropdown after selection
+  }
+});
+
+// Hide dropdown if clicked outside
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.relative')) {
+    languageOptions.classList.add('hidden');
+  }
+});
+
+// JavaScript for Mobile Dropdown
+const dropdownArrowMobile = document.getElementById('dropdownArrowMobile');
+const languageOptionsMobile = document.getElementById('languageOptionsMobile');
+const selectedLanguageMobile = document.getElementById('selectedLanguageMobile');
+
+// Toggle dropdown visibility when arrow is clicked (Mobile)
+dropdownArrowMobile.addEventListener('click', () => {
+  languageOptionsMobile.classList.toggle('hidden');
+});
+
+// Update the selected language when an option is clicked (Mobile)
+languageOptionsMobile.addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    const selectedLang = event.target.getAttribute('data-lang');
+    selectedLanguageMobile.innerText = selectedLang;
+    languageOptionsMobile.classList.add('hidden'); // Hide dropdown after selection
+  }
+});
+
 // Loader Animation
-var tl = gsap.timeline();
+// var tl = gsap.timeline();
 
 tl.from("#loader img", {
   x: 100,
@@ -322,7 +366,7 @@ tl.to("#loader", {
   display: "none",
 });
 
-tl.from("nav div a",{
+tl.from("nav div a , #selectedLanguage , .arrow",{
   y:-10,
   opacity:0,
   stagger:0.15, 

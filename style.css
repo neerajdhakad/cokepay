@@ -183,3 +183,13 @@ img {
 #loader h3{
   font-size: 2vw;
 }
+#languageOptions.hidden {
+  display: none;
+}
+
+#languageOptions {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
