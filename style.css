@@ -22,6 +22,7 @@ img {
     background-color: #F40009; 
     color: #fff; 
   }
+
 /* Font Classes */
 .poppins-thin {
     font-family: "Poppins", sans-serif;
@@ -135,15 +136,11 @@ img {
     right: 10%; 
     top: 70%;
   }
-  /* .features-section{
-    top: ;
-  } */
   .faq-toggle .faq-icon {
     transition: transform 0.3s;
   }
-  /* Navbar */
-/* Initial Hamburger */
-/* Hamburger icon styles */
+  
+/* Navbar */
 .hamburger span {
   display: block;
   width: 30px;
@@ -159,7 +156,7 @@ img {
 }
 
 .hamburger.cross span:nth-child(2) {
-  opacity: 0; /* Hide the middle bar */
+  opacity: 0;
 }
 
 .hamburger.cross span:nth-child(3) {

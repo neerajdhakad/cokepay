@@ -198,8 +198,7 @@ document.getElementById('hamburger').onclick = function() {
       mobileMenu.classList.add('hidden');
     }, 300);
   }
-
-  // Toggle hamburger icon to cross
+ 
   hamburgerIcon.classList.toggle('cross');
 };
 
@@ -215,14 +214,56 @@ mobileLinks.forEach(link => {
     setTimeout(() => {
       mobileMenu.classList.add('hidden');
     }, 300);
-
-    // Revert hamburger icon to original
+ 
     hamburgerIcon.classList.remove('cross');
   };
 });
 
-//Captcha function
+const dropdownArrow = document.getElementById('dropdownArrow');
+const languageOptions = document.getElementById('languageOptions');
+const selectedLanguage = document.getElementById('selectedLanguage');
 
+// Toggle dropdown visibility when arrow is clicked
+dropdownArrow.addEventListener('click', () => {
+  languageOptions.classList.toggle('hidden');
+});
+
+// Update the selected language when an option is clicked
+languageOptions.addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    const selectedLang = event.target.getAttribute('data-lang');
+    selectedLanguage.innerText = selectedLang;
+    languageOptions.classList.add('hidden'); // Hide dropdown after selection
+  }
+});
+
+// Hide dropdown if clicked outside
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.relative')) {
+    languageOptions.classList.add('hidden');
+  }
+});
+
+// JavaScript for Mobile Dropdown
+const dropdownArrowMobile = document.getElementById('dropdownArrowMobile');
+const languageOptionsMobile = document.getElementById('languageOptionsMobile');
+const selectedLanguageMobile = document.getElementById('selectedLanguageMobile');
+
+// Toggle dropdown visibility when arrow is clicked (Mobile)
+dropdownArrowMobile.addEventListener('click', () => {
+  languageOptionsMobile.classList.toggle('hidden');
+});
+
+// Update the selected language when an option is clicked (Mobile)
+languageOptionsMobile.addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    const selectedLang = event.target.getAttribute('data-lang');
+    selectedLanguageMobile.innerText = selectedLang;
+    languageOptionsMobile.classList.add('hidden');
+  }
+});
+
+// Got a Question? Query form
 function generateCaptcha() {
   const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$!";
   let captcha = '';
@@ -232,7 +273,6 @@ function generateCaptcha() {
   return captcha;
 }
 
-// Function to set captcha
 function setCaptcha() {
   const captchaText = document.getElementById('captchaText');
   const newCaptcha = generateCaptcha(); 
@@ -242,10 +282,8 @@ function setCaptcha() {
   captchaText.style.transform = '';  
 }
 
-// Initialize captcha on page load
 window.onload = setCaptcha;
 
-// Refresh captcha when button is clicked
 document.getElementById('refreshCaptcha').addEventListener('click', function () {
   setCaptcha();
 });
@@ -293,58 +331,12 @@ document.getElementById('refreshCaptcha').addEventListener('click', function () 
     document.getElementById('captcha-error').classList.add('hidden');
   }
 
-  // If form is valid, submit it (you can add further actions here)
   if (valid) {
     alert('Form submitted successfully!');
-    // You can submit the form or send an AJAX request here
   }
-});
+}); 
 
-const dropdownArrow = document.getElementById('dropdownArrow');
-const languageOptions = document.getElementById('languageOptions');
-const selectedLanguage = document.getElementById('selectedLanguage');
-
-// Toggle dropdown visibility when arrow is clicked
-dropdownArrow.addEventListener('click', () => {
-  languageOptions.classList.toggle('hidden');
-});
-
-// Update the selected language when an option is clicked
-languageOptions.addEventListener('click', (event) => {
-  if (event.target.tagName === 'LI') {
-    const selectedLang = event.target.getAttribute('data-lang');
-    selectedLanguage.innerText = selectedLang;
-    languageOptions.classList.add('hidden'); // Hide dropdown after selection
-  }
-});
-
-// Hide dropdown if clicked outside
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('.relative')) {
-    languageOptions.classList.add('hidden');
-  }
-});
-
-// JavaScript for Mobile Dropdown
-const dropdownArrowMobile = document.getElementById('dropdownArrowMobile');
-const languageOptionsMobile = document.getElementById('languageOptionsMobile');
-const selectedLanguageMobile = document.getElementById('selectedLanguageMobile');
-
-// Toggle dropdown visibility when arrow is clicked (Mobile)
-dropdownArrowMobile.addEventListener('click', () => {
-  languageOptionsMobile.classList.toggle('hidden');
-});
-
-// Update the selected language when an option is clicked (Mobile)
-languageOptionsMobile.addEventListener('click', (event) => {
-  if (event.target.tagName === 'LI') {
-    const selectedLang = event.target.getAttribute('data-lang');
-    selectedLanguageMobile.innerText = selectedLang;
-    languageOptionsMobile.classList.add('hidden'); // Hide dropdown after selection
-  }
-});
-
-// Loader Animation
+// Gsap Animation
 var tl = gsap.timeline();
 
 tl.from("#loader img", {
