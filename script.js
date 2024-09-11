@@ -181,7 +181,6 @@ toggles.forEach(toggle => {
   });
 });
 
-
 // Navbar
 document.getElementById('hamburger').onclick = function() {
   const mobileMenu = document.getElementById('mobile-menu');
@@ -198,7 +197,6 @@ document.getElementById('hamburger').onclick = function() {
       mobileMenu.classList.add('hidden');
     }, 300);
   }
- 
   hamburgerIcon.classList.toggle('cross');
 };
 
@@ -214,7 +212,6 @@ mobileLinks.forEach(link => {
     setTimeout(() => {
       mobileMenu.classList.add('hidden');
     }, 300);
- 
     hamburgerIcon.classList.remove('cross');
   };
 });
